@@ -1,23 +1,25 @@
-function calc()
-{
-            var n1 = parseFloat(document.getElementById('n1').value);
-            var n2 = parseFloat(document.getElementById('n2').value);
-            var oper = document.getElementById('operators').value;
+const operator = prompt("Enter choice: +, -, /, *, %");
+const num1 = parseFloat(prompt("Enter first number: "));
+const num2 = parseFloat(prompt("Enter second number: "));
 
-            if (oper === '+')
-            {
-                document.getElementById('result').value = n1+n2;
-            }
-            if (oper === '-')
-            {
-                document.getElementById('result').value = n1-n2;
-            }
-            if (oper === '/')
-            {
-                document.getElementById('result').value = n1/n2;
-            }
-            if (oper === 'X')
-            {
-                document.getElementById('result').value = n1*n2;
-            }
+let result;
+
+if (operator == '+') {
+    result = num1 + num2;
+
+
+} else if (operator == '-') {
+    result = num1 - num2;
+
+}  else if (operator == '/') {
+    result = num1 / num2;
+
+}  else if (operator == '*') {
+    result = num1 * num2;
+
+} else {
+    result = num1 % num2;
+
 }
+
+alert(result);
